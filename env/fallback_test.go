@@ -21,6 +21,14 @@ func TestWithDefaultString(t *testing.T) {
 			Given:    "FOO",
 			Expected: "fallback",
 		},
+		{
+			Name:     "returns the fallback value if the env var is empty",
+			Given:    "FOO",
+			Expected: "bar",
+			Env: map[string]string{
+				"FOO": "",
+			},
+		},
 	}
 
 	for _, tc := range cases {

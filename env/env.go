@@ -9,6 +9,7 @@ import (
 
 var (
 	ErrUndefinedVariable = errors.New("environment variable is undefined")
+	ErrEmptyVariable     = errors.New("environment variable is empty")
 )
 
 // WithString retrieves the value of an environment variable identified by the key.
@@ -172,5 +173,10 @@ func lookup(key string) (string, error) {
 	if !ok {
 		return "", ErrUndefinedVariable
 	}
+
+	if val == "" {
+		return "", ErrEmptyVariable
+	}
+
 	return val, nil
 }
