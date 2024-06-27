@@ -15,6 +15,7 @@ var (
 // WithString retrieves the value of an environment variable identified by the key.
 //
 // ErrUndefinedVariable is returned if the environment variable lookup fails.
+// ErrEmptyVariable is returned if the environment variable is empty.
 func WithString(key string) (string, error) {
 	val, err := lookup(key)
 	if err != nil {
@@ -27,6 +28,7 @@ func WithString(key string) (string, error) {
 // and tries to parse it as a boolean. An error is returned if the boolean parsing fails.
 //
 // ErrUndefinedVariable is returned if the environment variable lookup fails.
+// ErrEmptyVariable is returned if the environment variable is empty.
 func WithBool(key string) (bool, error) {
 	val, err := lookup(key)
 	if err != nil {
@@ -45,6 +47,7 @@ func WithBool(key string) (bool, error) {
 // and tries to parse it as an integer. An error is returned if the integer parsing fails.
 //
 // ErrUndefinedVariable is returned if the environment variable lookup fails.
+// ErrEmptyVariable is returned if the environment variable is empty.
 func WithInt(key string) (int, error) {
 	val, err := lookup(key)
 	if err != nil {
@@ -63,6 +66,7 @@ func WithInt(key string) (int, error) {
 // and tries to parse it as an integer. An error is returned if the integer parsing fails.
 //
 // ErrUndefinedVariable is returned if the environment variable lookup fails.
+// ErrEmptyVariable is returned if the environment variable is empty.
 func WithInt8(key string) (int8, error) {
 	val, err := lookup(key)
 	if err != nil {
@@ -81,6 +85,7 @@ func WithInt8(key string) (int8, error) {
 // and tries to parse it as an integer. An error is returned if the integer parsing fails.
 //
 // ErrUndefinedVariable is returned if the environment variable lookup fails.
+// ErrEmptyVariable is returned if the environment variable is empty.
 func WithInt16(key string) (int16, error) {
 	val, err := lookup(key)
 	if err != nil {
@@ -99,6 +104,7 @@ func WithInt16(key string) (int16, error) {
 // and tries to parse it as an integer. An error is returned if the integer parsing fails.
 //
 // ErrUndefinedVariable is returned if the environment variable lookup fails.
+// ErrEmptyVariable is returned if the environment variable is empty.
 func WithInt32(key string) (int32, error) {
 	val, err := lookup(key)
 	if err != nil {
@@ -117,6 +123,7 @@ func WithInt32(key string) (int32, error) {
 // and tries to parse it as an integer. An error is returned if the integer parsing fails.
 //
 // ErrUndefinedVariable is returned if the environment variable lookup fails.
+// ErrEmptyVariable is returned if the environment variable is empty.
 func WithInt64(key string) (int64, error) {
 	val, err := lookup(key)
 	if err != nil {
@@ -135,6 +142,7 @@ func WithInt64(key string) (int64, error) {
 // and tries to parse it as a float32. An error is returned if the float32 parsing fails.
 //
 // ErrUndefinedVariable is returned if the environment variable lookup fails.
+// ErrEmptyVariable is returned if the environment variable is empty.
 func WithFloat32(key string) (float32, error) {
 	val, err := lookup(key)
 	if err != nil {
@@ -153,6 +161,7 @@ func WithFloat32(key string) (float32, error) {
 // and tries to parse it as a float64. An error is returned if the float64 parsing fails.
 //
 // ErrUndefinedVariable is returned if the environment variable lookup fails.
+// ErrEmptyVariable is returned if the environment variable is empty.
 func WithFloat64(key string) (float64, error) {
 	val, err := lookup(key)
 	if err != nil {

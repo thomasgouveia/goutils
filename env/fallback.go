@@ -1,7 +1,7 @@
 package env
 
 // WithDefaultString retrieves the value of an environment variable identified by the key.
-// If the environment variable is not set, it returns the fallback default string provided.
+// If the environment variable is not set or empty, it returns the fallback default string provided.
 //
 // This method is a convenience wrapper around WithString to silent the error and return a fallback value.
 func WithDefaultString(key string, fallback string) string {
@@ -13,7 +13,7 @@ func WithDefaultString(key string, fallback string) string {
 }
 
 // WithDefaultBool retrieves the value of an environment variable identified by the key.
-// If the environment variable is not set, it returns the fallback default bool provided.
+// If the environment variable is not set or empty, it returns the fallback default bool provided.
 //
 // This method is a convenience wrapper around WithBool to silent the error and return a fallback value.
 func WithDefaultBool(key string, fallback bool) bool {
@@ -25,7 +25,7 @@ func WithDefaultBool(key string, fallback bool) bool {
 }
 
 // WithDefaultInt retrieves the value of an environment variable identified by the key.
-// If the environment variable is not set, it returns the fallback default int provided.
+// If the environment variable is not set or empty, it returns the fallback default int provided.
 //
 // This method is a convenience wrapper around WithInt to silent the error and return a fallback value.
 func WithDefaultInt(key string, fallback int) int {
@@ -37,7 +37,7 @@ func WithDefaultInt(key string, fallback int) int {
 }
 
 // WithDefaultInt8 retrieves the value of an environment variable identified by the key.
-// If the environment variable is not set, it returns the fallback default int8 provided.
+// If the environment variable is not set or empty, it returns the fallback default int8 provided.
 //
 // This method is a convenience wrapper around WithInt8 to silent the error and return a fallback value.
 func WithDefaultInt8(key string, fallback int8) int8 {
@@ -49,7 +49,7 @@ func WithDefaultInt8(key string, fallback int8) int8 {
 }
 
 // WithDefaultInt16 retrieves the value of an environment variable identified by the key.
-// If the environment variable is not set, it returns the fallback default int16 provided.
+// If the environment variable is not set or empty, it returns the fallback default int16 provided.
 //
 // This method is a convenience wrapper around WithInt16 to silent the error and return a fallback value.
 func WithDefaultInt16(key string, fallback int16) int16 {
@@ -61,7 +61,7 @@ func WithDefaultInt16(key string, fallback int16) int16 {
 }
 
 // WithDefaultInt32 retrieves the value of an environment variable identified by the key.
-// If the environment variable is not set, it returns the fallback default int32 provided.
+// If the environment variable is not set or empty, it returns the fallback default int32 provided.
 //
 // This method is a convenience wrapper around WithInt32 to silent the error and return a fallback value.
 func WithDefaultInt32(key string, fallback int32) int32 {
@@ -73,7 +73,7 @@ func WithDefaultInt32(key string, fallback int32) int32 {
 }
 
 // WithDefaultInt64 retrieves the value of an environment variable identified by the key.
-// If the environment variable is not set, it returns the fallback default int64 provided.
+// If the environment variable is not set or empty, it returns the fallback default int64 provided.
 //
 // This method is a convenience wrapper around WithInt8 to silent the error and return a fallback value.
 func WithDefaultInt64(key string, fallback int64) int64 {
@@ -85,7 +85,7 @@ func WithDefaultInt64(key string, fallback int64) int64 {
 }
 
 // WithDefaultFloat32 retrieves the value of an environment variable identified by the key.
-// If the environment variable is not set, it returns the fallback default int provided.
+// If the environment variable is not set or empty, it returns the fallback default int provided.
 //
 // This method is a convenience wrapper around WithFloat32 to silent the error and return a fallback value.
 func WithDefaultFloat32(key string, fallback float32) float32 {
@@ -97,7 +97,7 @@ func WithDefaultFloat32(key string, fallback float32) float32 {
 }
 
 // WithDefaultFloat64 retrieves the value of an environment variable identified by the key.
-// If the environment variable is not set, it returns the fallback default int provided.
+// If the environment variable is not set or empty, it returns the fallback default int provided.
 //
 // This method is a convenience wrapper around WithFloat64 to silent the error and return a fallback value.
 func WithDefaultFloat64(key string, fallback float64) float64 {
